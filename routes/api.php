@@ -13,6 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::middleware('swiss')->get('/swiss', 'AstroController@swiss')->name('swiss.api');
+Route::middleware('swiss')->post('/swiss', 'AstroController@swiss')->name('swiss.api');
